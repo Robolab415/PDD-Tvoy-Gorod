@@ -4,17 +4,21 @@
     <article class="ticket">
         <h2 class="ticket__title">{{ ticket }}</h2>
         {% if ticket.image %}
-            <img src="{{ ticket.image.url }}">
+            <img src="{{ ticket.image.url }}" class="ticket__image">
         {% else %}
             <p class="ticket__image-empty">Изображения нет.</p>
+        {% endif %}
+        {% if ticket.photos %}
+            <div class="ticket__photos">
+                {% for image in ticket.photos.all %}
+                    <a target="_blank" href="{{ image.photo.url }}">
+                        <img src="{{ image.thumbnail.url }}">
+                    </a>
+                {% endfor %}
+            </div>
         {% endif %}
         <p class="ticket__question">{{ ticket.question }}</p>
         <p class="choice">{{ ticket.choice1 }}</p>
         <p class="choice">{{ ticket.choice2 }}</p>
         <p class="choice">{{ ticket.choice3 }}</p>
-        {% for image in ticket.photos.all %}
-            <a target="_blank" href="{{ image.photo.url }}">
-                <img src="{{ image.thumbnail.url }}">
-            </a>
-        {% endfor %}
 {% endblock %}

@@ -30,7 +30,7 @@
     \q
     ```
 
-3. Скопировать `local_settings_example.py` как `local_settings.py` из папки pdd_tvoy_gorod
+3. Скопировать `local_settings_example.py` как `local_settings.py` из папки pdd_tvoy_gorod.
     Заполнить поля Базы Данных в новом файле.
 
 4. Создать виртуальную среду:

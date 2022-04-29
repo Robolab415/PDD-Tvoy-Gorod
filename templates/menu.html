@@ -6,7 +6,7 @@
             </header>
         {% else %}
             <a href="{% url key %}"
-               class="menu__link{% if key == request.path|cut:'/' %} active{% endif %}">
+               class="menu__link{% if key == request.path|cut:'/' %} menu__link_active{% endif %}">
                 {{ value }}
             </a>
         {% endif %}
