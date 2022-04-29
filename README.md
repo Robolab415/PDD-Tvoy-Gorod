@@ -6,7 +6,10 @@
 2. Создать Базу Данных:
 
     ```
-    $ sudo -u postgres psql CREATE DATABASE myproject;
+    $ sudo -u postgres psql
+    ```
+    ```
+     CREATE DATABASE myproject;
     ```
 
     ### Создание пользователя ###
