@@ -27,7 +27,8 @@
     \q
     ```
 
-3. Скопировать `local_settings_example.py` как `local_settings.py`, заполнить поля Базы Данных.
+3. Скопировать `local_settings_example.py` как `local_settings.py` из папки pdd_tvoy_gorod
+    Заполнить поля Базы Данных в новом файле.
 
 4. Создать виртуальную среду:
     ## Установка virtualenv ##
@@ -54,6 +55,8 @@
 
 6. Для запуска движка выполнить:
     ```
+    $ python manage.py makemigrations
+    $ python manage.py migrate
     $ python manage.py runserver
     ```
 
