@@ -1,0 +1,14 @@
+<nav class="menu">
+    {% for key, value in menu_links.items %}
+        {% if key == 'index' %}
+            <header class="menu__header">
+                <a href="{% url key %}" class="menu__link">{{ value }}</a>
+            </header>
+        {% else %}
+            <a href="{% url key %}"
+               class="menu__link{% if key == request.path|cut:'/' %} active{% endif %}">
+                {{ value }}
+            </a>
+        {% endif %}
+    {% endfor %}
+</nav>

@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block main %}
+    {% for ticket in ticket_list %}
+        <a href="{{ ticket.get_absolute_url }}">{{ ticket }}</a>
+    {% empty %}
+        <span class="empty">Не найдено ни одно билета.</span>
+    {% endfor %}
+    {{ tickets_list }}
+{% endblock %}
+
