@@ -31,19 +31,19 @@
     Заполнить поля Базы Данных в новом файле.
 
 4. Создать виртуальную среду:
-    ## Установка virtualenv ##
+    ### Установка virtualenv ###
     ```
     $ sudo -H pip3 install --upgrade pip
     $ sudo -H pip3 install virtualenv
     ```
 
-    ## Создание среды ##
+    ### Создание среды ###
     Перейти в каталог приложения и выполнить:
     ```
     $ virtualenv pdd_tvoy_gorod_env
     ```
 
-    ## Активация ##
+    ### Активация ###
     ```
     $ source pdd_tvoy_gorod_env/bin/activate
     ```
